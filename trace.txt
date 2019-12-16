@@ -1,0 +1,730 @@
+PS C:\Users\claj2606\Desktop\IGE487> bash docker_initandrundb.bash
+=== MAKE SURE THAT YOU RUN THIS SCRIPT FROM THE REPOSITORY WHERE THIS SCRIPT IS STORED, OTHERWISE THIS WONT WORK
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Error response from daemon: remove ige487-pg-docker-volume-marcdupuis-jonathancg: volume is in use - [7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9]
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  161.3kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-image-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: Conflict. The container name "/ige487-pg-docker-instance-marcdupuis-jonathancg" is already in use by container "7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9". You have to remove (or rename) that container to be able to reuse that name.
+See 'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'.
+PS C:\Users\claj2606\Desktop\IGE487> bash dockerrun_clearDB.bash
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Error response from daemon: remove ige487-pg-docker-volume-marcdupuis-jonathancg: volume is in use - [7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9]
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  161.3kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-image-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: Conflict. The container name "/ige487-pg-docker-instance-marcdupuis-jonathancg" is already in use by container "7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9". You have to remove (or rename) that container to be able to reuse that name.
+See 'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'.
+PS C:\Users\claj2606\Desktop\IGE487> bash dockerrun_clearDB.bash
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Error response from daemon: remove ige487-pg-docker-volume-marcdupuis-jonathancg: volume is in use - [7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9]
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  161.3kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-image-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: Conflict. The container name "/ige487-pg-docker-instance-marcdupuis-jonathancg" is already in use by container "7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9". You have to remove (or rename) that container to be able to reuse that name.
+See 'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'.
+PS C:\Users\claj2606\Desktop\IGE487> bash dockerrun_clearDB.bash
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+Error response from daemon: You cannot remove a running container 7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9. Stop the container before attempting removal or force remove
+Error response from daemon: remove ige487-pg-docker-volume-marcdupuis-jonathancg: volume is in use - [7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9]
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  161.3kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-image-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+C:\Program Files\Docker\Docker\Resources\bin\docker.exe: Error response from daemon: Conflict. The container name "/ige487-pg-docker-instance-marcdupuis-jonathancg" is already in use by container "7b53850c625e57f5fda186e2b7cae4984977c6a463ac1c286546d59343f802a9". You have to remove (or rename) that container to be able to reuse that name.
+See 'C:\Program Files\Docker\Docker\Resources\bin\docker.exe run --help'.
+PS C:\Users\claj2606\Desktop\IGE487> bash dockerrun_clearDB.bash
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+7b53850c625e
+ige487-pg-docker-volume-marcdupuis-jonathancg
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  161.3kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-instance-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2019-10-27 19:08:53.772 UTC [41] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2019-10-27 19:08:53.778 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-10-27 19:08:53.808 UTC [42] LOG:  database system was shut down at 2019-10-27 19:08:53 UTC
+2019-10-27 19:08:53.817 UTC [41] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01_create.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/02_create_triggers.sql
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/03_insert.sql
+INSERT 0 2
+INSERT 0 6
+INSERT 0 4
+INSERT 0 6
+INSERT 0 9
+INSERT 0 9
+INSERT 0 3
+INSERT 0 3
+INSERT 0 6
+INSERT 0 3
+INSERT 0 6
+INSERT 0 6
+INSERT 0 6
+INSERT 0 3
+INSERT 0 2
+INSERT 0 1
+INSERT 0 1
+INSERT 0 4
+INSERT 0 4
+INSERT 0 4
+INSERT 0 6
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+
+
+waiting for server to shut down....2019-10-27 19:08:54.988 UTC [41] LOG:  received fast shutdown request
+2019-10-27 19:08:54.996 UTC [41] LOG:  aborting any active transactions
+2019-10-27 19:08:54.999 UTC [41] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+2019-10-27 19:08:54.999 UTC [43] LOG:  shutting down
+2019-10-27 19:08:55.115 UTC [41] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2019-10-27 19:08:55.210 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2019-10-27 19:08:55.211 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-10-27 19:08:55.211 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2019-10-27 19:08:55.249 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-10-27 19:08:55.290 UTC [86] LOG:  database system was shut down at 2019-10-27 19:08:55 UTC
+2019-10-27 19:08:55.305 UTC [1] LOG:  database system is ready to accept connections
+PS C:\Users\claj2606\Desktop\IGE487> bash dockerrun_clearDB.bash
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+4c5f95c3e946
+ige487-pg-docker-volume-marcdupuis-jonathancg
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  161.3kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-instance-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+waiting for server to start....2019-10-27 19:09:12.104 UTC [41] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2019-10-27 19:09:12.109 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-10-27 19:09:12.146 UTC [42] LOG:  database system was shut down at 2019-10-27 19:09:11 UTC
+2019-10-27 19:09:12.153 UTC [41] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01_create.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/02_create_triggers.sql
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/03_insert.sql
+INSERT 0 2
+INSERT 0 6
+INSERT 0 4
+INSERT 0 6
+INSERT 0 9
+INSERT 0 9
+INSERT 0 3
+INSERT 0 3
+INSERT 0 6
+INSERT 0 3
+INSERT 0 6
+INSERT 0 6
+INSERT 0 6
+INSERT 0 3
+INSERT 0 2
+INSERT 0 1
+INSERT 0 1
+INSERT 0 4
+INSERT 0 4
+INSERT 0 4
+INSERT 0 6
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+
+
+waiting for server to shut down...2019-10-27 19:09:13.294 UTC [41] LOG:  received fast shutdown request
+.2019-10-27 19:09:13.300 UTC [41] LOG:  aborting any active transactions
+2019-10-27 19:09:13.303 UTC [41] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+2019-10-27 19:09:13.303 UTC [43] LOG:  shutting down
+2019-10-27 19:09:13.398 UTC [41] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2019-10-27 19:09:13.516 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2019-10-27 19:09:13.516 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-10-27 19:09:13.516 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2019-10-27 19:09:13.527 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-10-27 19:09:13.558 UTC [86] LOG:  database system was shut down at 2019-10-27 19:09:13 UTC
+2019-10-27 19:09:13.574 UTC [1] LOG:  database system is ready to accept connections
+2019-10-27 19:09:24.203 UTC [94] LOG:  could not send data to client: Broken pipe
+2019-10-27 19:09:24.203 UTC [94] STATEMENT:
+              SELECT n.nspname as "schema",
+                p.proname as "name",
+                d.description,
+                pg_catalog.pg_get_function_result(p.oid) as "result_type",
+                pg_catalog.pg_get_function_arguments(p.oid) as "argument_types",
+              CASE
+                WHEN p.prokind = 'a' THEN 'agg'
+                WHEN p.prokind = 'w' THEN 'window'
+                WHEN p.prorettype = 'pg_catalog.trigger'::pg_catalog.regtype THEN 'trigger'
+                ELSE 'normal'
+              END as "type"
+              FROM pg_catalog.pg_proc p
+                  LEFT JOIN pg_catalog.pg_namespace n ON n.oid = p.pronamespace
+                  LEFT JOIN pg_catalog.pg_description d ON p.oid = d.objoid
+              WHERE n.nspname <> 'information_schema'
+                AND pg_catalog.pg_function_is_visible(p.oid)
+                AND p.prorettype <> 'pg_catalog.trigger'::pg_catalog.regtype
+                AND has_schema_privilege(quote_ident(n.nspname), 'USAGE') = true
+                AND has_function_privilege(p.oid, 'execute') = true
+              ORDER BY 1, 2, 4;
+2019-10-27 19:09:24.204 UTC [94] FATAL:  connection to client lost
+2019-10-27 19:09:24.204 UTC [94] STATEMENT:
+              SELECT n.nspname as "schema",
+                p.proname as "name",
+                d.description,
+PS C:\Users\claj2606\Desktop\IGE487> bash dockerrun.bash
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rm" requires at least 1 argument.
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+e7db78be3fe1
+ige487-pg-docker-volume-marcdupuis-jonathancg
+ige487-pg-docker-volume-marcdupuis-jonathancg
+Sending build context to Docker daemon  157.7kB
+Step 1/5 : FROM postgres:latest
+ ---> f88dfa384cc4
+Step 2/5 : COPY *.sql /docker-entrypoint-initdb.d/
+ ---> Using cache
+ ---> c918634d9fce
+Step 3/5 : ENV POSTGRES_USER postgres
+ ---> Using cache
+ ---> a707c595e384
+Step 4/5 : ENV POSTGRES_PASSWORD docker
+ ---> Using cache
+ ---> abfaf2edb9ff
+Step 5/5 : ENV POSTGRES_DB public
+ ---> Using cache
+ ---> e1b4d67b886f
+Successfully built e1b4d67b886f
+Successfully tagged ige487-pg-docker-instance-marcdupuis-jonathancg:latest
+SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "en_US.utf8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default max_connections ... 100
+selecting default shared_buffers ... 128MB
+selecting default time zone ... Etc/UTC
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... initdb: warning: enabling "trust" authentication for local connections
+You can change this by editing pg_hba.conf or using the option -A, or
+--auth-local and --auth-host, the next time you run initdb.
+ok
+
+
+Success. You can now start the database server using:
+
+    pg_ctl -D /var/lib/postgresql/data -l logfile start
+
+waiting for server to start....2019-10-27 19:14:21.709 UTC [41] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2019-10-27 19:14:21.715 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-10-27 19:14:21.750 UTC [42] LOG:  database system was shut down at 2019-10-27 19:14:21 UTC
+2019-10-27 19:14:21.757 UTC [41] LOG:  database system is ready to accept connections
+ done
+server started
+CREATE DATABASE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/01_create.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/02_create_triggers.sql
+CREATE FUNCTION
+CREATE FUNCTION
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+CREATE TRIGGER
+
+
+/usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/03_insert.sql
+INSERT 0 2
+INSERT 0 6
+INSERT 0 4
+INSERT 0 6
+INSERT 0 9
+INSERT 0 9
+INSERT 0 3
+INSERT 0 3
+INSERT 0 6
+INSERT 0 3
+INSERT 0 6
+INSERT 0 6
+INSERT 0 6
+INSERT 0 3
+INSERT 0 2
+INSERT 0 1
+INSERT 0 1
+INSERT 0 4
+INSERT 0 4
+INSERT 0 4
+INSERT 0 6
+INSERT 0 2
+INSERT 0 2
+INSERT 0 2
+
+
+2019-10-27 19:14:22.938 UTC [41] LOG:  received fast shutdown request
+waiting for server to shut down....2019-10-27 19:14:22.945 UTC [41] LOG:  aborting any active transactions
+2019-10-27 19:14:22.947 UTC [41] LOG:  background worker "logical replication launcher" (PID 48) exited with exit code 1
+2019-10-27 19:14:22.947 UTC [43] LOG:  shutting down
+2019-10-27 19:14:23.057 UTC [41] LOG:  database system is shut down
+ done
+server stopped
+
+PostgreSQL init process complete; ready for start up.
+
+2019-10-27 19:14:23.154 UTC [1] LOG:  starting PostgreSQL 12.0 (Debian 12.0-2.pgdg100+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 8.3.0-6) 8.3.0, 64-bit
+2019-10-27 19:14:23.154 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+2019-10-27 19:14:23.155 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+2019-10-27 19:14:23.170 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2019-10-27 19:14:23.200 UTC [86] LOG:  database system was shut down at 2019-10-27 19:14:23 UTC
+2019-10-27 19:14:23.209 UTC [1] LOG:  database system is ready to accept connections

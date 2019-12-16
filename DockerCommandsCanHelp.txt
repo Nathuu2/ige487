@@ -1,0 +1,10 @@
+Install & Configure Docker:
+
+Pull docker image: docker pull postgres
+Docker volume: docker volume create postgresql
+Run docker: docker run --rm=false --name pg-docker -e POSTGRES_PASSWORD=docker -p 5432:5432 -v postgresql:/var/lib/postgresql/data postgres
+
+Other Useful Commands:
+
+Show Containers That Stopped, but still exists: docker ps -a 
+Kill Containers That STopped, but still exists: docker rm $(docker ps -f status=exited -q)

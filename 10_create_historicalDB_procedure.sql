@@ -265,6 +265,7 @@ BEGIN
 END;
 $$;
 
+/*
 -- WORK LOG PROC TASK
 CREATE OR REPLACE PROCEDURE historicaldb.insert_work_log_task(_id_work_log INT, _id_task INT)
 LANGUAGE plpgsql    
@@ -294,3 +295,100 @@ BEGIN
       COMMIT;
 END;
 $$;
+
+-- TASK PROC 
+CREATE OR REPLACE PROCEDURE historicaldb.insert_task(_id_task INTEGER, _id_priority INTEGER, _id_state INTEGER, _name VARCHAR, _description TEXT)
+LANGUAGE plpgsql
+AS $$
+BEGIN 
+   INSERT INTO historicalDB.task_current 
+   (id_task, id_priority, id_state, name, description, key_since, id_priority_since, id_state_since, name_since, description_since)
+   VALUES (_id_task, _id_priority, _id_state, _name, _description, NOW(),NOW(),NOW(),NOW(),NOW())
+   ON CONFLICT DO NOTHING;
+
+   COMMIT;
+END;
+$$;
+
+CREATE OR REPLACE PROCEDURE historicaldb.update_work_log(_id_work_log INTEGER, _description TEXT, _hour DOUBLE PRECISION)
+LANGUAGE plpgsql    
+AS $$
+DECLARE 
+   _record RECORD;
+BEGIN 
+      SELECT INTO _record 
+      login, id_work_log, description, hour, description_since, hour_since
+      FROM historicalDB.work_log_current AS wlc
+      WHERE wlc.id_work_log = _id_work_log;
+      
+      IF(_record IS NOT NULL) THEN
+            -- Handle historical db and current 
+            IF(_description IS NOT NULL AND _record.description <> _description) THEN 
+                  INSERT INTO historicaldb.work_log_description_history (login, id_work_log, valid, description)
+                  VALUES (_record.login, _record.id_work_log, tsrange(_record.description_since, NOW()), _record.description);
+                  UPDATE historicalDB.work_log_current SET description = _description, description_since = NOW() WHERE id_work_log = _record.id_work_log;
+            END IF;
+            IF(_hour IS NOT NULL AND _record.hour <> _hour) THEN 
+                  INSERT INTO historicaldb.work_log_hour_history (login, id_work_log, valid, hour)
+                  VALUES (_record.login, _record.id_work_log, tsrange(_record.hour_since, NOW()), _record.description);
+                  UPDATE historicalDB.work_log_current SET hour = _hour, hour_since = NOW() WHERE id_work_log = _record.id_work_log;
+            END IF;           
+      END IF;
+      COMMIT;
+END;
+$$;
+
+CREATE TABLE historicalDB.work_log_current (
+   id_work_log INTEGER NOT NULL,
+   login VARCHAR NOT NULL,
+   key_since TIMESTAMP NOT NULL,
+   description TEXT NOT NULL,
+   description_since TIMESTAMP NOT NULL,
+   hour DOUBLE PRECISION NOT NULL,
+   hour_since TIMESTAMP NOT NULL,
+
+   PRIMARY KEY(id_work_log),
+   FOREIGN KEY(login) REFERENCES historicalDB.user(login)
+);
+
+CREATE OR REPLACE PROCEDURE historicaldb.delete_work_log(_id_work_log INTEGER)
+LANGUAGE plpgsql    
+AS $$
+DECLARE 
+   _record RECORD;
+BEGIN 
+      SELECT INTO _record 
+      login, id_work_log, description, hour, key_since, description_since, hour_since 
+      FROM historicalDB.work_log_current AS wlc
+      WHERE wlc.id_work_log = _id_work_log;
+      
+      IF(_record IS NOT NULL) THEN
+            INSERT INTO historicaldb.work_log_description_history (login, id_work_log, valid, description)
+            VALUES (_record.login, tsrange(_record.surname_since, NOW()), _record.surname);      
+      
+            INSERT INTO historicaldb.work_log_hour_history (login, id_work_log, valid, hour)
+            VALUES (_record.login, tsrange(_record.name_since, NOW()), _record.name);      
+      
+            INSERT INTO historicaldb.work_log_id_history (login, id_work_log, valid)
+            VALUES (_record.login, tsrange(_record.password_since, NOW()), _record.password);      
+            
+            DELETE FROM historicalDB.work_log_current WHERE login = _record.login;
+      END IF;
+      
+      COMMIT;
+END;
+$$;
+
+-- PROJECT PROC
+CREATE OR REPLACE PROCEDURE historicaldb.insert_project(_id INTEGER, _id_state INTEGER, _name VARCHAR, _description TEXT)
+LANGUAGE plpgsql
+AS $$
+BEGIN 
+   INSERT INTO historicalDB.project_current 
+   (id, key_since, id_state, id_state_since, name, name_since, description, description_since) 
+   VALUES (_id, NOW(), _id_state, NOW(), _name, NOW(), description, NOW()) 
+   ON CONFLICT DO NOTHING;      
+   COMMIT;
+END;
+$$;
+*/

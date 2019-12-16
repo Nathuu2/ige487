@@ -1,3 +1,5 @@
+-- SCHÉMAS INTERNE NON DISPONIBLE POUR L'EXTERNE
+
 -- USER PROC
 
 CREATE OR REPLACE PROCEDURE historicaldb.insert_user(_login VARCHAR, _surname VARCHAR, _name VARCHAR, _password CHAR(64), _email VARCHAR)
@@ -15,7 +17,7 @@ BEGIN
 END;
 $$;
 
-CREATE OR REPLACE PROCEDURE historicaldb.update_user(_old_login VARCHAR, _login VARCHAR, _surname VARCHAR, _name VARCHAR, _password CHAR(64), _email VARCHAR)
+CREATE OR REPLACE PROCEDURE historicaldb.update_user(_login VARCHAR, _surname VARCHAR, _name VARCHAR, _password CHAR(64), _email VARCHAR)
 LANGUAGE plpgsql    
 AS $$
 DECLARE 
@@ -24,7 +26,7 @@ BEGIN
       SELECT INTO _record 
       login, surname, name, password, email, login_since, surname_since, name_since, password_since, email_since 
       FROM historicalDB.user_current AS uc
-      WHERE uc.login = _old_login;
+      WHERE uc.login = _login;
       
       IF(_record IS NOT NULL) THEN
             -- Handle historical db and current 
@@ -47,11 +49,6 @@ BEGIN
                   INSERT INTO historicaldb.user_email_history (login, valid, email)
                   VALUES (_record.login, tsrange(_record.email_since, NOW()), _record.email);
                   UPDATE historicalDB.user_current SET email = _email, email_since = NOW() WHERE login = _record.login;
-            END IF;
-            IF(_login IS NOT NULL AND _record.login <> _login) THEN 
-                  INSERT INTO historicaldb.user_login_history (login, valid)
-                  VALUES (_record.login, tsrange(_record.login_since, NOW()));
-                  UPDATE historicalDB.user_current SET login = _login, login_since = NOW() WHERE login = _record.login;
             END IF;
       END IF;
       COMMIT;
@@ -240,38 +237,60 @@ CREATE TABLE historicalDB.work_log_current (
    FOREIGN KEY(login) REFERENCES historicalDB.user(login)
 );
 
-CREATE OR REPLACE PROCEDURE historicaldb.delete_work_log(_login VARCHAR)
+CREATE OR REPLACE PROCEDURE historicaldb.delete_work_log(_id_work_log INTEGER)
 LANGUAGE plpgsql    
 AS $$
 DECLARE 
    _record RECORD;
 BEGIN 
-
       SELECT INTO _record 
-      login, surname, name, password, email, login_since, surname_since, name_since, password_since, email_since 
-      FROM historicalDB.user_current AS uc
-      WHERE uc.login = _login;
+      login, id_work_log, description, hour, key_since, description_since, hour_since 
+      FROM historicalDB.work_log_current AS wlc
+      WHERE wlc.id_work_log = _id_work_log;
       
       IF(_record IS NOT NULL) THEN
-            INSERT INTO historicaldb.user_surname_history (login, valid, surname)
+            INSERT INTO historicaldb.work_log_description_history (login, id_work_log, valid, description)
             VALUES (_record.login, tsrange(_record.surname_since, NOW()), _record.surname);      
       
-            INSERT INTO historicaldb.user_name_history (login, valid, name)
+            INSERT INTO historicaldb.work_log_hour_history (login, id_work_log, valid, hour)
             VALUES (_record.login, tsrange(_record.name_since, NOW()), _record.name);      
       
-            INSERT INTO historicaldb.user_password_history (login, valid, password)
+            INSERT INTO historicaldb.work_log_id_history (login, id_work_log, valid)
             VALUES (_record.login, tsrange(_record.password_since, NOW()), _record.password);      
-      
-            INSERT INTO historicaldb.user_email_history (login, valid, email)
-            VALUES (_record.login, tsrange(_record.email_since, NOW()), _record.email);
-
-            INSERT INTO historicaldb.user_login_history (login, valid)
-            VALUES (_record.login, tsrange(_record.login_since, NOW()));
-
-            DELETE FROM historicalDB.user_current WHERE login = _record.login;
+            
+            DELETE FROM historicalDB.work_log_current WHERE login = _record.login;
       END IF;
       
       COMMIT;
 END;
 $$;
 
+-- WORK LOG PROC TASK
+CREATE OR REPLACE PROCEDURE historicaldb.insert_work_log_task(_id_work_log INT, _id_task INT)
+LANGUAGE plpgsql    
+AS $$
+BEGIN 
+      INSERT INTO historicalDB.task_work_log_current (login, id_task, key_since) VALUES (_login, _id_task, NOW()) ON CONFLICT DO NOTHING;      
+      COMMIT;
+END;
+$$;
+
+CREATE OR REPLACE PROCEDURE historicaldb.delete_work_log_task(_id_work_log INT, _id_task INT)
+LANGUAGE plpgsql    
+AS $$
+DECLARE 
+   _record RECORD;
+BEGIN 
+      SELECT INTO _record 
+      id_work_log, id_task, key_since
+      FROM historicalDB.task_work_log_current AS twlc
+      WHERE twlc.id_work_log = _id_work_log AND twlc.id_task = _id_task;
+
+      IF(_record IS NOT NULL) THEN
+            INSERT INTO historicaldb.task_work_log_history (id_work_log, id_task, valid)
+            VALUES (_record.id_work_log, _record.id_task, tsrange(_record.key_since, NOW()));
+      END IF;
+
+      COMMIT;
+END;
+$$;
